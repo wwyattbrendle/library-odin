@@ -15,7 +15,23 @@
 
 .header {
     grid-area: 1 / 2 / 2 / -1;
-    background-color: blanchedalmond
+    background-color: blanchedalmond;
+    display: flex;
+    gap: 1.3rem;
+}
+
+.header .text-container {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.text-container h1 {
+    align-self: end;
+    font-size: 4rem;
+}
+
+.text-container h4 {
+    font-size: 1.5rem;
 }
 
 .content {
