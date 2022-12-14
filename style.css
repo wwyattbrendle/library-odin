@@ -9,16 +9,14 @@
     --glow:  -2px 5px 10px 7px var(--highlight-color);
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 30vw 70vw;
-    grid-template-rows: 15vh 85vh;
-}
-
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
     background-color: var(--dark-background);
     color: beige;
+    height: 100vh;
+    width: 30vw;
+    position: fixed;
+    z-index: 2;
 }
 
 .sidebar fieldset {
@@ -109,6 +107,11 @@ fieldset#fieldset-3 #button-container {
     background-color: rgb(24, 124, 201);
     display: flex;
     gap: 1.3rem;
+    height: 15vh;
+    width: 70vw;
+    position: fixed;
+    margin-left: 30vw;
+    z-index: 1;
 }
 
 .header .text-container {
@@ -128,4 +131,10 @@ fieldset#fieldset-3 #button-container {
 .content {
     grid-area: 2 / 2 / -1 / -1;
     background-color: lavender;
+    width: 61vw;
+    margin-left: 30vw;
+    position: relative;
+    top: 15vh;
+    z-index: 0;
+    padding: 4vw;
 }
