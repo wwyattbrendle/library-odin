@@ -16,7 +16,40 @@
                 <h4><em>library</em></h4>
             </div>
         </div>
-        <div class="sidebar"></div>
+        <div class="sidebar">
+            <form action="" method="post" id="form">
+                <fieldset id="fieldset-1">
+                    <h2>Add to Library</h2>
+                    <h5>Keep reading and adding more books.  Just don't forget to finish what you started! <br> Keep track of how many pages you've read and your progress by updating the information on the book</h5>
+                </fieldset>
+                <fieldset id="fieldset-2">
+                    <legend>Enter the Information Below</legend>
+                    <div id="input-container">
+                        <div class="label">
+                            <label for="title">Title</label>
+                            <input class="field" id="title" type="text" placeholder="Walden" name="title">
+                        </div>
+                        <div class="label">
+                            <label for="author">Author</label>
+                            <input class="field" id="author" type="text" placeholder="Thoreau" name="author">
+                        </div>
+                        <div class="label">
+                            <label for="page-count">Page Count</label>
+                            <input class="field" id="page-count" type="text" placeholder="172" name="page-count">
+                        </div>
+                        <div class="label">
+                            <label for="pages-read">Page Currently On</label>
+                            <input class="field" id="pages-read" type="text" placeholder="68" name="pages-read">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="fieldset-3">
+                    <div id="button-container">
+                        <button type="submit">Add</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
         <div class="content"></div>
     </div>
 </body>
