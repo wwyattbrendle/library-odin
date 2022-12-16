@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
@@ -49,25 +49,25 @@
                 </fieldset>
                 <fieldset id="fieldset-3">
                     <div id="button-container">
-                        <button type="submit">Add</button>
+                        <button type="submit" id="add-button">Add</button>
                     </div>
                 </fieldset>
             </form>
         </div>
-        <div class="content">
+        <div class="content" id="append-here">
             <div class="book">
                 <h4>Walden</h4>
                 <h5>Henry David Thoreau</h5>
                 <div class="page">
                     <h5>Page 153</h5>
                     <div class="page-buttons">
-                        <button><p class="button-text">+</p></button>
-                        <button><p class="button-text">-</p></button>
+                        <button id="increment"><p class="button-text">+</p></button>
+                        <button id="decrement"><p class="button-text">-</p></button>
                     </div>
                 </div>
-                <h6 id="total-pages">of 172</h6>
-                <div id="book-buttons">
-                    <button id="delete-button">Delete</button>
+                <h6 class="total-pages">of 172</h6>
+                <div class="book-buttons">
+                    <button class="delete-button">Delete</button>
                     <div class="my-label">
                         <input name="switch" type="checkbox" id="switch">
                         <div class="sliding-groove"></div>
@@ -76,29 +76,6 @@
                     </div>
                 </div>
             </div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
             <div class="empty"></div>
         </div>
     </div>

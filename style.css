@@ -109,6 +109,7 @@ fieldset#fieldset-3 #button-container {
     font-size: 2rem;
     box-shadow:  var(--glow);
     border-radius: 200px;
+    cursor: pointer;
 }
 
 #button-container button:active {
@@ -184,6 +185,10 @@ fieldset#fieldset-3 #button-container {
     color: beige;
 }
 
+.book h5 {
+    align-self: flex-start;
+}
+
 .book .page {
     align-self: flex-end;
     display: flex;
@@ -191,11 +196,16 @@ fieldset#fieldset-3 #button-container {
     gap: 8px;
 }
 
-.book>#total-pages {
+.page h5 {
+    position: relative;
+    top: 1rem;
+}
+
+.book>.total-pages {
     align-self: flex-end;
 }
 
-.book>#book-buttons {
+.book>.book-buttons {
     display: flex;
     gap: 1.5rem;
 }
@@ -212,6 +222,7 @@ fieldset#fieldset-3 #button-container {
     color: beige;
     background-color: var(--dark-background);
     box-shadow: 0px 0px 3px 3px var(--highlight-color);
+    cursor: pointer;
 }
 
 .page-buttons .button-text {
@@ -240,7 +251,7 @@ fieldset#fieldset-3 #button-container {
     box-shadow: 0px 0px 3px 3px var(--highlight-color);
 }
 
-.sliding-groove:after {
+.sliding-groove::after {
     content: "";
     width: 28px;
     height: 24px;
@@ -260,7 +271,7 @@ input:checked + .sliding-groove {
     background-color: var(--checkbox-color);
 }
 
-input:checked + .sliding-groove:after {
+input:checked + .sliding-groove::after {
     transform: translateX(40px);
 }
 
@@ -273,8 +284,7 @@ input:checked + .sliding-groove:after {
     color: var(--checkbox-color);
     font-size: 15px;
     font-weight: 700;
-    transition: all .3 ease;
-    text-shadow: 2px 20px 30px 100px black;
+    transition: all .3s ease;
 }
 
 .my-label .labels::after {
@@ -299,7 +309,7 @@ input:checked + .sliding-groove:after {
     opacity: 1;
 }
 
-#delete-button {
+.delete-button {
     width: 80px;
     height: 26px;
     background-color: crimson;
@@ -307,4 +317,5 @@ input:checked + .sliding-groove:after {
     border-radius: 30px;
     color: beige;
     font-weight: 700;
+    cursor: pointer;
 }
