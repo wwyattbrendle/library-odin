@@ -15,6 +15,8 @@
     --glow:  -2px 5px 10px 7px var(--highlight-color);
     --book-glow: 2px 5px 10px 7px var(--unread-color);
     --checkbox-color: #5fcf80;
+    --read-book-glow: 2px 5px 10px 7px var(--checkbox-color);
+
     --unread-color: rgb(245, 139, 1);
     background: repeating-radial-gradient(#000000, var(--dark-background) 3%);    
     background-attachment: fixed;
@@ -183,6 +185,10 @@ fieldset#fieldset-3 #button-container {
     left: -3px;
     top: -7px;
     color: beige;
+}
+
+.book.read {
+    box-shadow: var(--read-book-glow);
 }
 
 .book h5 {
