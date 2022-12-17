@@ -325,3 +325,19 @@ input:checked + .sliding-groove::after {
     font-weight: 700;
     cursor: pointer;
 }
+
+.field {
+    border-radius: 5px;
+}
+
+.field:valid {
+    border: 2px solid green;
+}
+
+.field:invalid {
+    border: 2px solid var(--unread-color);
+}
+
+.field:focus {
+    box-shadow: 1px 1px 12px 3px var(--highlight-color);
+}

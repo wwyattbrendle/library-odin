@@ -28,22 +28,22 @@
                     <div id="input-container">
                         <div class="label">
                             <label for="title">Title</label>
-                            <input class="field" id="title" type="text" placeholder="Walden" name="title">
+                            <input class="field" id="title" type="text" name="title" required>
                         </div>
                         <div class="divider"></div>
                         <div class="label">
                             <label for="author">Author</label>
-                            <input class="field" id="author" type="text" placeholder="Thoreau" name="author">
+                            <input id="author" class="field" type="text" name="author" required>
                         </div>
                         <div class="divider"></div>
                         <div class="label">
                             <label for="page-count">Page Count</label>
-                            <input class="field" id="page-count" type="text" placeholder="172" name="page-count">
+                            <input class="field" id="page-count" type="number" name="page-count" required>
                         </div>
                         <div class="divider"></div>
                         <div class="label">
                             <label for="pages-read">Current Page</label>
-                            <input class="field" id="pages-read" type="text" placeholder="172" name="pages-read">
+                            <input class="field" id="pages-read" type="number" name="pages-read" required>
                         </div>
                     </div>
                 </fieldset>
@@ -54,30 +54,7 @@
                 </fieldset>
             </form>
         </div>
-        <div class="content" id="append-here">
-            <div class="book">
-                <h4>Walden</h4>
-                <h5>Henry David Thoreau</h5>
-                <div class="page">
-                    <h5>Page 153</h5>
-                    <div class="page-buttons">
-                        <button id="increment"><p class="button-text">+</p></button>
-                        <button id="decrement"><p class="button-text">-</p></button>
-                    </div>
-                </div>
-                <h6 class="total-pages">of 172</h6>
-                <div class="book-buttons">
-                    <button class="delete-button">Delete</button>
-                    <div class="my-label">
-                        <input name="switch" type="checkbox" id="switch">
-                        <div class="sliding-groove"></div>
-                        <label class="my-label" for="switch"></label>
-                        <span class="labels" data-on="READ!" data-off=""></span>
-                    </div>
-                </div>
-            </div>
-            <div class="empty"></div>
-        </div>
+        <div class="content" id="append-here"></div>
     </div>
 </body>
 </html>

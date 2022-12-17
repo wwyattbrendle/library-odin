@@ -1,6 +1,9 @@
 let myLibrary = [];
 
 function Book(title, author, pageCount, pagesRead) {
+    if (pagesRead > pageCount) {
+        pagesRead = pageCount;
+    }
     this.title = title;
     this.author = author;
     this.pageCount = parseInt(pageCount);
@@ -12,14 +15,13 @@ function Book(title, author, pageCount, pagesRead) {
     }
     this.isAppended = false;
 }
-
+ 
 const a = document.querySelector("#title");
 const b = document.querySelector("#author");
 const c = document.querySelector("#page-count");
 const d = document.querySelector("#pages-read");
 
 function addBookToLibrary() {
-    console.log(a.value, b.value, c.value, d.value);
     let newBook = new Book(a.value, b.value, c.value, d.value);
     myLibrary.push(newBook);
     a.value = "";
@@ -30,6 +32,10 @@ function addBookToLibrary() {
 
 //container to append books
 const contentContainer = document.getElementById("append-here");
+const formData = document.getElementById("form");
+const empty = document.createElement("div");
+empty.classList.add("empty");
+contentContainer.appendChild(empty);
 
 
 function createBookElement (arrayPosition, title, author, totalPages, currentPage) { 
@@ -120,6 +126,12 @@ function createBookElement (arrayPosition, title, author, totalPages, currentPag
     bookElement.appendChild(buttonsContainer);
     contentContainer.appendChild(bookElement);
 
+    //add read class
+    if (totalPages === currentPage) {
+        bookElement.classList.toggle("read");
+        checkBox.click();
+    }
+
     //add event listeners to buttons
     incrementButton.addEventListener("click", () => {
         if (currentPage < totalPages) {
@@ -160,21 +172,28 @@ function createBookElement (arrayPosition, title, author, totalPages, currentPag
 //                                                               \\
     deleteButton.addEventListener("click", () => {
         if (confirm("Are you sure you want to delete this book? This action is irreversible") == true) {
-            contentContainer.remove(bookElement);
-            // delete myLibrary[n];
+            bookElement.remove();
+            delete myLibrary[n];
+            //remove empty spaces from array - otherwise empty slot produces reference error when adding back to array
+            let filtered = myLibrary.filter(function (el) {
+                return el != null;
+            });
+            myLibrary = filtered;
         }
     });
 }
 
-const addButton = document.getElementById("add-button")
+const addButton = document.getElementById("add-button");
 
-addButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    addBookToLibrary();
-    for (let i = 0; i < myLibrary.length; i++) {
-        if (myLibrary[i].isAppended === false) {
-            createBookElement(i, myLibrary[i].title, myLibrary[i].author, myLibrary[i].pageCount, myLibrary[i].pagesRead);
-            myLibrary[i].isAppended = true;
+formData.addEventListener("submit", (event) => {
+        empty.remove();
+        addBookToLibrary();
+        for (let i = 0; i < myLibrary.length; i++) {
+            if (myLibrary[i].isAppended === false) {
+                createBookElement(i, myLibrary[i].title, myLibrary[i].author, myLibrary[i].pageCount, myLibrary[i].pagesRead);
+                myLibrary[i].isAppended = true;
+            }
         }
-    }
+        contentContainer.appendChild(empty);
+        event.preventDefault();
 });
