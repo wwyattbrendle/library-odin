@@ -8,11 +8,6 @@ function Book(title, author, pageCount, pagesRead) {
     this.author = author;
     this.pageCount = parseInt(pageCount);
     this.pagesRead = parseInt(pagesRead);
-    if (pageCount === pagesRead) {
-        this.isRead = true;
-    } else {
-        this.isRead = false;
-    }
     this.isAppended = false;
 }
  
