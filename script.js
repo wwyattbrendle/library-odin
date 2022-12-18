@@ -156,20 +156,7 @@ function createBookElement (arrayPosition, title, author, totalPages, currentPag
     checkBox.addEventListener("click", () => {
         bookElement.classList.toggle("read");
     });
-//                                                               //
-//\                                                             ///
-//\\                                                           ////
-//\\\                                                         /////
-//\\\\                                                       //////
-//\\\\\                                                     ///////
-//\\\\\\                                                   ////////
-////////            /////  COMPLETE BELOW  \\\\\           \\\\\\\\
-///////                                                     \\\\\\\
-//////                                                       \\\\\\
-/////                                                         \\\\\
-////                                                           \\\\
-///                                                             \\\
-//                                                               \\
+    
     deleteButton.addEventListener("click", () => {
         if (confirm("Are you sure you want to delete this book? This action is irreversible") == true) {
             bookElement.remove();
